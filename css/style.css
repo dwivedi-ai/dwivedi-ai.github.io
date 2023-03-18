@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #16161a;
+}
+
+a {
+    text-decoration: none;
+    color: #7f5af0;
+}
+
+a:hover {
+    color: #d9376e;
+}
+
+b {
+    font-weight: 600;
+}
+
+
+.navigation {
+    position: fixed;
+    background-color: #16161a;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    width: 20%;
+    height: 100%;
+    box-shadow: 0 0 100px rgba(127,90,240,0.2);
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    text-align: center;
+}
+
+.navigation li {
+    display: block;
+    padding: 10px;
+    border-left: 5px solid #333;
+}
+
+.navigation li.active {
+    border-left: 5px solid #7f5af0;
+}
+
+.navigation li.active a {
+    color: #7f5af0;
+}
+
+.navigation a {
+    color: #94a1b2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content {
+    float: right;
+    width: 80%;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+}
+.profile {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 100%;
+}
+
+
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.texts {
+    color: #fffffe;
+    width: 50%;
+    display: block;
+}
+#name {
+    margin: 25px;
+    font-family: 'Syncopate', sans-serif;
+    text-shadow: 0 0 20px rgba(127,90,240,0.8);
+}
+
+
+.info {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.info-header {
+    height: fit-content;
+    margin: 5% 0;
+    font-weight: 700;
+    font-size: 2em;
+    padding: 5px;
+    color: #fffffe;
+    font-family: 'Syncopate', sans-serif;
+    text-shadow: 0 0 20px rgba(127,90,240,0.8);
+    border-bottom: 5px solid #7f5af0;
+}
+
+#bio {
+    font-family: 'Poppins', sans-serif;
+    margin: 25px;
+}
+
+#connectWithMe {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 25px;
+}
+
+#connectWithMe h3 {
+    margin: 25px 0;
+}
+
+#connectWithMe svg {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px rgba(127,90,240,0.5);
+}
+
+#connectWithMe svg:hover{
+    box-shadow: 0 0 20px rgba(127,90,240,0.8);
+}
+
+#masterImage {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+
+
+.creative {
+    background: -webkit-linear-gradient(45deg,#ee7752, #e73c7e, #23a6d5, #23d5ab, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation-name: gradientColourChange;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    #name {
+        text-align: center;
+    }
+      
+    .content {
+        width: 100%;
+    }
+    #masterImage {
+        height: 150px;
+        width: 150px;
+    }
+    .headline {
+        padding: 10% 0;
+        flex-wrap: wrap-reverse;
+    }
+    .texts {
+        width: 100%;
+    }
+    .navigation {
+        position: fixed;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        padding-bottom: 15px;
+    }
+    .navigation ul {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .navigation li {
+        display: inline-block;
+        border: none;
+        border-bottom: 5px solid #94a1b2;
+    }
+    
+    .navigation li.active {
+        border: none;
+        border-bottom: 5px solid #7f5af0;
+    }
+    
+    .navigation li.active a {
+        color: #7f5af0;
+    }
+
+    #connectWithMe {
+        text-align: center;
+    }
+    
+}
