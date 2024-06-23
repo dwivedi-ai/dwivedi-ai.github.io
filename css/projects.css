@@ -1,0 +1,27 @@
+.projects li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.projects .projects-bundle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: #1F1F1F 1px solid;
+}
+
+.projects .projects-bundle p {
+    max-width: 500px;
+}
+
+.projects-bundle .thumbnail {
+    width: 8rem;
+    margin-right: 2rem;
+}
+
+.projects-bundle .code-icon {
+    height: 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
