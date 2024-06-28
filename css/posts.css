@@ -1,0 +1,173 @@
+--root {
+    --primary-color: #0033db;
+    --secondary-color: #2ed5f2;
+    --dark-color: #1A1A1A;
+    --light-color: #ffffff;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 12.5rem;
+}
+
+.nav {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: all ease 0.2s;
+}
+
+.nav a:hover {
+    color: #0033db;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+.nav ul li {
+    margin-left: 2rem;
+}
+
+.nav ul .current {
+    font-weight: bold;
+}
+
+.nav ul li .dark-mode {
+    fill: white;
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.nav ul li .dark-mode:hover {
+    fill: #0033db;
+}
+
+.content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#blog-content p {
+    margin-top: 1em;
+    line-height: 1.6;
+}
+
+#blog-content h2, #blog-content h3, #blog-content h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+.footer {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    bottom: 0;
+}
+
+pre code {
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+
+img {
+    max-width: 800px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    #blog-content {
+        padding: 10px;
+    }
+    #blog-content img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0 10rem;
+    }
+    
+}
+
+@media screen and (max-width: 1040px) {
+    body {
+        padding: 0 8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 0 6rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 4rem;
+    }
+    .nav {
+        justify-content: center;
+    
+    }
+    .nav ul li {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    body {
+        padding: 0 2rem;
+    }
+    .content {
+        padding-top: 0;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content h2 {
+        font-size: 1rem;
+    }
+    .content-text {
+        font-size: 0.8rem;
+    }
+    .exp-bundle p {
+        font-size: 0.6rem;
+    }
+    .experience p {
+        font-size: 0.6rem;
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
+}   

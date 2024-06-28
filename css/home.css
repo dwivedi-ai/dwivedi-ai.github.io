@@ -139,6 +139,7 @@ body {
     text-decoration: none;
 }
 
+
 .experience li::before {
     content: '';
     position: absolute;
@@ -183,6 +184,7 @@ body {
     align-items: center;
     font-size: 1rem;
     font-weight: 500;
+    bottom: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -216,8 +218,17 @@ body {
         padding: 0 4rem;
     }
     .content .profile-pic img {
-        width: 4rem;
+        width: 6rem;
         box-shadow: 5px 5px #0033db;
+    }
+    .content-text .page-title {
+        font-size: 2rem;
+    }
+    .content-text .sub-title {
+        font-size: 1rem;
+    }
+    .content-text {
+        font-size: 0.9rem;
     }
     .nav {
         justify-content: center;
@@ -230,7 +241,24 @@ body {
 
 @media screen and (max-width: 490px) {
     body {
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
-
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content h2 {
+        font-size: 1rem;
+    }
+    .content-text {
+        font-size: 0.8rem;
+    }
+    .exp-bundle p {
+        font-size: 0.6rem;
+    }
+    .experience p {
+        font-size: 0.6rem;
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
 }
