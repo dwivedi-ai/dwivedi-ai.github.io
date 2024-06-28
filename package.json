@@ -1,0 +1,23 @@
+{
+  "name": "dwivedi-ai",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwivedi-ai/dwivedi-ai.github.io.git"
+  },
+  "author": "Ankit Dwivedi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwivedi-ai/dwivedi-ai.github.io/issues"
+  },
+  "homepage": "https://github.com/dwivedi-ai/dwivedi-ai.github.io#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "js-yaml": "^4.1.0"
+  }
+}

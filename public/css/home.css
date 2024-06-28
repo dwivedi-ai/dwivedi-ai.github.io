@@ -1,0 +1,272 @@
+--root {
+    --primary-color: #0033db;
+    --secondary-color: #2ed5f2;
+    --dark-color: #1A1A1A;
+    --light-color: #ffffff;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 12.5rem;
+}
+
+.nav {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: all ease 0.2s;
+}
+
+.nav a:hover {
+    color: #0033db;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+.nav ul li {
+    margin-left: 2rem;
+}
+
+.nav ul .current {
+    font-weight: bold;
+}
+
+.nav ul li .dark-mode {
+    fill: white;
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.nav ul li .dark-mode:hover {
+    fill: #0033db;
+}
+
+.content {
+    padding: 2rem 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.content-text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.content > .content-text {
+    flex: 1;
+}
+
+.content-text .page-title {
+    font-size: 2.5rem;
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+
+.content-text .sub-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 200;
+}
+
+.content .profile-pic {
+    flex: 0 0 auto;
+    margin-left: 2rem;
+}
+
+.content .profile-pic img {
+    width: 20rem;
+    height: auto;
+    float: right;
+    box-shadow: 20px 20px #0033db;
+}
+
+.content-text .section-heading {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.content-text h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.experience {
+    border-left: #ffffff 2px solid;
+}
+
+.experience li {
+    position: relative;
+    list-style: none; /* Remove default list style */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: -0.5rem;
+    padding-left: 2rem; /* Add padding to make space for the custom circle */
+}
+
+.experience li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exp-bundle a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.experience li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.news li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.news .news-bundle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.news .news-bundle .date {
+    margin-right: 2rem;
+}
+
+.news .news-bundle p {
+    font-weight: 300;
+}
+
+.news .news-bundle a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0 10rem;
+    }
+    
+}
+
+@media screen and (max-width: 1040px) {
+    body {
+        padding: 0 8rem;
+    }
+    .content .profile-pic img {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 0 6rem;
+    }
+    .content .profile-pic img {
+        width: 10rem;
+        box-shadow: 10px 10px #0033db;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 4rem;
+    }
+    .content .profile-pic img {
+        width: 6rem;
+        box-shadow: 5px 5px #0033db;
+    }
+    .content-text .page-title {
+        font-size: 2rem;
+    }
+    .content-text .sub-title {
+        font-size: 1rem;
+    }
+    .content-text {
+        font-size: 0.9rem;
+    }
+    .nav {
+        justify-content: center;
+    
+    }
+    .nav ul li {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    body {
+        padding: 0 2rem;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content h2 {
+        font-size: 1rem;
+    }
+    .content-text {
+        font-size: 0.8rem;
+    }
+    .exp-bundle p {
+        font-size: 0.6rem;
+    }
+    .experience p {
+        font-size: 0.6rem;
+    }
+
+    .news-bundle h2 {
+        font-size: 0.8rem;
+    }
+    .news-bundle p {
+        font-size: 0.6rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
