@@ -50,7 +50,7 @@
 
     
             if (blogFile) {
-                fetch(`../blogs/${blogFile}`)
+                fetch(`../_blogs/${blogFile}`)
                     .then(response => response.text())
                     .then(mdContent => {
                         marked.setOptions({
