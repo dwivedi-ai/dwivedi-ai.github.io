@@ -213,7 +213,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     body {
         padding: 0 4rem;
     }
@@ -237,9 +237,24 @@ body {
     .nav ul li {
         margin-left: 1rem;
     }
+    .news-bundle h2 {
+        font-size: 0.8rem;
+    }
+    .experience p {
+        font-size: 0.8rem;
+    }
+    .exp-bundle p {
+        font-size: 0.6rem;
+    }
+    .exp-bundle h2 {
+        font-size: 0.8rem;
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
     body {
         padding: 0 2rem;
     }
@@ -270,8 +285,41 @@ body {
     .nav ul > li:first-child {
         margin-left: 0rem;
     }
+}
 
+@media screen and (max-width: 420px) {
+    body {
+        padding: 0 1rem;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content h2 {
+        font-size: 1rem;
+    }
+    .content-text {
+        font-size: 0.8rem;
+    }
+    .exp-bundle p {
+        font-size: 0.6rem;
+    }
+    .experience p {
+        font-size: 0.6rem;
+    }
+    .news-bundle h2 {
+        font-size: 0.8rem;
+    }
+    .news-bundle p {
+        font-size: 0.6rem;
+    }
     .footer {
         font-size: 0.8rem;
+    }
+    .nav ul li {
+        margin-left: 0.5rem;
+    }
+    .content .profile-pic img {
+        width: 5rem;
+        box-shadow: 5px 5px #0033db;
     }
 }

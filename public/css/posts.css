@@ -94,6 +94,7 @@ pre code {
 
 
 img {
+    border-radius: 5px;
     max-width: 800px;
 }
 
@@ -118,6 +119,9 @@ p img {
     }
     #blog-content img {
         width: 100%;
+    }
+    .footer {
+        font-size: 0.8rem;
     }
 }
 
@@ -176,10 +180,43 @@ p img {
     .experience p {
         font-size: 0.6rem;
     }
-    .nav ul > li:first-child {
-        margin-left: 0rem;
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 420px) {
+    body {
+        padding: 0 1rem;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content h2 {
+        font-size: 1rem;
+    }
+    .content-text {
+        font-size: 0.8rem;
+    }
+    .exp-bundle p {
+        font-size: 0.6rem;
+    }
+    .experience p {
+        font-size: 0.6rem;
+    }
+    .news-bundle h2 {
+        font-size: 0.8rem;
+    }
+    .news-bundle p {
+        font-size: 0.6rem;
     }
     .footer {
         font-size: 0.8rem;
     }
-}   
+    .nav ul li {
+        margin-left: 0.5rem;
+    }
+    .content .profile-pic img {
+        width: 5rem;
+        box-shadow: 5px 5px #0033db;
+    }
+}
