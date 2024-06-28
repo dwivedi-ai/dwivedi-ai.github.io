@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return text;
     }
 
-    fetch('../_blogs/blogInformation/blogsInfo.json')
+    fetch('../blogs/blogInformation/blogsInfo.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load blogs info');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const blogTile = document.createElement('div');
                 blogTile.className = 'blogTile';
                 
-                fetch(`../_blogs/${blog.filename}`)
+                fetch(`../blogs/${blog.filename}`)
                     .then(response => response.text())
                     .then(mdContent => {
                         const { frontMatter, markdown } = parseMarkdown(mdContent);
