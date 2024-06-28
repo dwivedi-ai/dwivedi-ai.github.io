@@ -176,6 +176,9 @@ p img {
     .experience p {
         font-size: 0.6rem;
     }
+    .nav ul > li:first-child {
+        margin-left: 0rem;
+    }
     .footer {
         font-size: 0.8rem;
     }

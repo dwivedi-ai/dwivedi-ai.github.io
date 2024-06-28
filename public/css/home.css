@@ -266,6 +266,11 @@ body {
         font-size: 0.6rem;
     }
 
+    /* make the first li from inside the ul as margin-left 0 */
+    .nav ul > li:first-child {
+        margin-left: 0rem;
+    }
+
     .footer {
         font-size: 0.8rem;
     }
