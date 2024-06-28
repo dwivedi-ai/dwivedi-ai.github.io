@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to truncate text to a specified word limit
     function truncateText(text, wordLimit) {
+        if (!text) return ''; // Return empty string if text is undefined
         const words = text.split(' ');
         if (words.length > wordLimit) {
             return words.slice(0, wordLimit).join(' ') + '...';
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return text;
     }
 
-    fetch('../blogs/blogInformation/blogsInfo.json')
+    fetch('/_blogs/blogInformation/blogsInfo.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load blogs info');
@@ -39,22 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 const blogTile = document.createElement('div');
                 blogTile.className = 'blogTile';
                 
-                fetch(`../blogs/${blog.filename}`)
+                fetch(`/_blogs/${blog.filename}`)
                     .then(response => response.text())
                     .then(mdContent => {
                         const { frontMatter, markdown } = parseMarkdown(mdContent);
 
                         const blogTitle = document.createElement('h2');
                         blogTitle.className = 'blogTitle';
-                        blogTitle.innerText = frontMatter.title;
+                        blogTitle.innerText = frontMatter.title || 'No Title';
 
-                        // Truncate the excerpt to 100 words
+                        // Truncate the excerpt to 40 words
                         const truncatedExcerpt = truncateText(frontMatter.excerpt, 40);
+
                         // Add blog date
                         const blogDate = document.createElement('p');
                         blogDate.className = 'blogDate';
-                        blogDate.innerText = frontMatter.date;
-                        blogTile.appendChild(blogDate);
+                        blogDate.innerText = frontMatter.date || 'No Date';
 
                         const blogDescription = document.createElement('p');
                         blogDescription.className = 'blogDescription';
@@ -66,14 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         readMoreLink.innerText = 'Read More';
                         blogTile.addEventListener('click', function() {
                             window.location.href = `post.html?file=${blog.filename}`;
-                        }
-                        );
+                        });
+                        
                         blogTile.appendChild(blogTitle);
+                        blogTile.appendChild(blogDate);
                         blogTile.appendChild(blogDescription);
                         blogTile.appendChild(readMoreLink);
                         content.appendChild(blogTile);
                     })
-                    .catch(error => console.error(error));
+                    .catch(error => console.error('Error loading markdown file:', error));
             });
         })
         .catch(error => {
